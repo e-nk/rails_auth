@@ -804,3 +804,137 @@ Processing by Api::V1::SessionsController#create as JSON
 Completed 200 OK in 317ms (Views: 0.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.0ms)
 
 
+Started POST "/api/v1/sign_in" for 127.0.0.1 at 2024-09-20 18:39:31 +0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "session"=>{"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enock@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:28:in `load_user'
+Completed 401 Unauthorized in 332ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/api/v1/sign_in" for 127.0.0.1 at 2024-09-20 18:39:36 +0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "session"=>{"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enock@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:28:in `load_user'
+Completed 200 OK in 342ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/api/v1/sign_in" for 127.0.0.1 at 2024-09-20 18:53:48 +0300
+  
+SyntaxError (/home/enock/Development/code/rails_auth/api/app/models/user.rb:9: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/models/user.rb:9: syntax error, unexpected end-of-input, expecting `end'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/api/v1/sign_in" for 127.0.0.1 at 2024-09-20 18:55:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "session"=>{"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enock@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:37:in `load_user'
+Completed 200 OK in 301ms (Views: 0.3ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:56:22 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/log_out"):
+  
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:56:55 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "hT15mCg3DjW1KrSWLVqa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10:in `generate_new_authentication_token'
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "authentication_token" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-09-20 15:56:56.148446"], ["authentication_token", "AmnLAzvCSjby7h9DGDcJkdyL"], ["id", 3]]
+  ↳ app/models/user.rb:10:in `generate_new_authentication_token'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10:in `generate_new_authentication_token'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 6.3ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:57:03 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "hT15mCg3DjW1KrSWLVqa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (Unrecognized status code :failure):
+  
+app/controllers/concerns/response.rb:3:in `json_response'
+app/controllers/api/v1/sessions_controller.rb:48:in `valid_token'
+Started POST "/api/v1/sign_in" for 127.0.0.1 at 2024-09-20 18:57:10 +0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "session"=>{"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enock@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:37:in `load_user'
+Completed 200 OK in 339ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:57:13 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "hT15mCg3DjW1KrSWLVqa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (Unrecognized status code :failure):
+  
+app/controllers/concerns/response.rb:3:in `json_response'
+app/controllers/api/v1/sessions_controller.rb:48:in `valid_token'
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:57:15 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "hT15mCg3DjW1KrSWLVqa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (Unrecognized status code :failure):
+  
+app/controllers/concerns/response.rb:3:in `json_response'
+app/controllers/api/v1/sessions_controller.rb:48:in `valid_token'
+Started POST "/api/v1/sign_in" for 127.0.0.1 at 2024-09-20 18:57:18 +0300
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "session"=>{"sign_in"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enock@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:37:in `load_user'
+Completed 200 OK in 337ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:57:30 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "AmnLAzvCSjby7h9DGDcJkdyL"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10:in `generate_new_authentication_token'
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "authentication_token" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-09-20 15:57:30.880338"], ["authentication_token", "6LNAL7WdWDEzmmxVPYauqMXX"], ["id", 3]]
+  ↳ app/models/user.rb:10:in `generate_new_authentication_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10:in `generate_new_authentication_token'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 18:58:31 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "AmnLAzvCSjby7h9DGcJkdyL"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+  
+ArgumentError (Unrecognized status code :failure):
+  
+app/controllers/concerns/response.rb:3:in `json_response'
+app/controllers/api/v1/sessions_controller.rb:48:in `valid_token'
+Started DELETE "/api/v1/log_out" for 127.0.0.1 at 2024-09-20 19:01:08 +0300
+Processing by Api::V1::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = ? LIMIT ?[0m  [["authentication_token", "AmnLAzvCSjby7h9DGcJkdyL"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sessions_controller.rb:44:in `valid_token'
+Filter chain halted as :valid_token rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
