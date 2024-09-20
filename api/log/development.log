@@ -20,3 +20,577 @@ Migrating to AddAuthenticationTokenToUsers (20240920080605)
   [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240920080605') RETURNING "version"[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:41:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant API
+
+class API::V1::RegistrationsController < Devise::RegistrationsController
+      ^^^
+Did you mean?  Api):
+  
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:41:59 +0300
+  
+NameError (uninitialized constant API
+
+class API::V1::RegistrationsController < Devise::RegistrationsController
+      ^^^
+Did you mean?  Api):
+  
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:42:30 +0300
+  
+NameError (undefined local variable or method `api' for main:Object
+
+class api::V1::RegistrationsController < Devise::RegistrationsController
+      ^^^):
+  
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:51:59 +0300
+  
+NameError (uninitialized constant API
+
+class API::V1::RegistrationsController < Devise::RegistrationsController
+      ^^^
+Did you mean?  Api):
+  
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:54:07 +0300
+  
+NameError (uninitialized constant API
+
+class API::V1::RegistrationsController < Devise::RegistrationsController
+      ^^^
+Did you mean?  Api):
+  
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:54:59 +0300
+  
+Zeitwerk::NameError (expected file /home/enock/Development/code/rails_auth/api/app/controllers/api/v1/registrations_controller.rb to define constant Api::V1::RegistrationsController, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.cname)
+      ^^^^^):
+  
+zeitwerk (2.6.18) lib/zeitwerk/loader/callbacks.rb:32:in `on_file_autoloaded'
+zeitwerk (2.6.18) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (7.2.1) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.2.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.2.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.2.1) lib/action_dispatch/http/request.rb:92:in `controller_class_for'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:102:in `action_encoding_template'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:87:in `encode'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:47:in `set_binary_encoding'
+actionpack (7.2.1) lib/action_dispatch/http/parameters.rb:70:in `path_parameters='
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:55:23 +0300
+  
+TypeError (superclass mismatch for class RegistrationsController):
+  
+app/controllers/api/v1/registrations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/registrations_controller.rb:2:in `<module:API>'
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:55:35 +0300
+  
+TypeError (superclass mismatch for class RegistrationsController):
+  
+app/controllers/api/v1/registrations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/registrations_controller.rb:2:in `<module:API>'
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:56:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /home/enock/Development/code/rails_auth/api/app/controllers/api/v1/registrations_controller.rb to define constant Api::V1::RegistrationsController, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.cname)
+      ^^^^^):
+  
+zeitwerk (2.6.18) lib/zeitwerk/loader/callbacks.rb:32:in `on_file_autoloaded'
+zeitwerk (2.6.18) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (7.2.1) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.2.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.2.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.2.1) lib/action_dispatch/http/request.rb:92:in `controller_class_for'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:102:in `action_encoding_template'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:87:in `encode'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:47:in `set_binary_encoding'
+actionpack (7.2.1) lib/action_dispatch/http/parameters.rb:70:in `path_parameters='
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:56:54 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^)
+  
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:57:00 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^)
+  
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:57:01 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^)
+  
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:57:06 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^)
+  
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:59:57 +0300
+  
+TypeError (superclass mismatch for class RegistrationsController):
+  
+app/controllers/api/v1/registrations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/registrations_controller.rb:2:in `<module:API>'
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 11:59:59 +0300
+  
+TypeError (superclass mismatch for class RegistrationsController):
+  
+app/controllers/api/v1/registrations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/registrations_controller.rb:2:in `<module:API>'
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:02:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /home/enock/Development/code/rails_auth/api/app/controllers/api/v1/registrations_controller.rb to define constant Api::V1::RegistrationsController, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.cname)
+      ^^^^^):
+  
+zeitwerk (2.6.18) lib/zeitwerk/loader/callbacks.rb:32:in `on_file_autoloaded'
+zeitwerk (2.6.18) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (7.2.1) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.2.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.2.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.2.1) lib/action_dispatch/http/request.rb:92:in `controller_class_for'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:102:in `action_encoding_template'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:87:in `encode'
+actionpack (7.2.1) lib/action_dispatch/request/utils.rb:47:in `set_binary_encoding'
+actionpack (7.2.1) lib/action_dispatch/http/parameters.rb:70:in `path_parameters='
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:02:29 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^)
+  
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:02:34 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant Api::V1::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^)
+  
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:03:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+[Devise] Could not find devise mapping for path "/api/v1/sign_up".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+AbstractController::ActionNotFound (Could not find devise mapping for path "/api/v1/sign_up".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+):
+  
+devise (4.9.4) app/controllers/devise_controller.rb:104:in `unknown_action!'
+devise (4.9.4) app/controllers/devise_controller.rb:79:in `assert_is_devise_resource!'
+devise (4.9.4) app/controllers/devise_controller.rb:117:in `require_no_authentication'
+activesupport (7.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:109:in `run_callbacks'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/mapper.rb:32:in `block in <class:Constraints>'
+actionpack (7.2.1) lib/action_dispatch/routing/mapper.rb:62:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:04:09 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "enocklagat@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "V3zbKtLt2FAHgCDJ5sHU"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "enocklagat@mail.com"], ["encrypted_password", "$2a$12$Vpvo/CZopmPDE9Nppvt1iu.r3kHJDH31YQbEvplIdQcX8a2sqWK3e"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2024-09-20 09:04:09.652716"], ["updated_at", "2024-09-20 09:04:09.652716"], ["authentication_token", "V3zbKtLt2FAHgCDJ5sHU"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+Completed 200 OK in 335ms (Views: 0.4ms | ActiveRecord: 6.5ms (3 queries, 0 cached) | GC: 1.7ms)
+
+
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:04:34 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnsnow@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "5jg9oNfhb8x5pV7JHnMD"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "johnsnow@mail.com"], ["encrypted_password", "$2a$12$sMmWCs5Pchx3/qhupwcJguGDvxq7USXWTd/.w94kCZEMNlQck8pSi"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2024-09-20 09:04:34.615416"], ["updated_at", "2024-09-20 09:04:34.615416"], ["authentication_token", "5jg9oNfhb8x5pV7JHnMD"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+Completed 200 OK in 294ms (Views: 0.4ms | ActiveRecord: 2.8ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:04:38 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnsnow@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+Completed 422 Unprocessable Content in 289ms (Views: 0.2ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:05:05 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+Filter chain halted as :ensure_params_exist rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:07:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant API
+
+class API::V1::RegistrationsController < Devise::RegistrationsController
+      ^^^
+Did you mean?  Api):
+  
+app/controllers/api/v1/registrations_controller.rb:1:in `<main>'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:08:07 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "enock@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "hT15mCg3DjW1KrSWLVqa"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "enock@mail.com"], ["encrypted_password", "$2a$12$kza/KUTDT6mXacyvNYIsn.D8264S9WUke6lrOHfBWzOEROgwr6XMC"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2024-09-20 09:08:07.903627"], ["updated_at", "2024-09-20 09:08:07.903627"], ["authentication_token", "hT15mCg3DjW1KrSWLVqa"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+Completed 200 OK in 310ms (Views: 0.5ms | ActiveRecord: 4.5ms (3 queries, 0 cached) | GC: 1.6ms)
+
+
