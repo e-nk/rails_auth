@@ -594,3 +594,58 @@ Processing by Api::V1::RegistrationsController#create as JSON
 Completed 200 OK in 310ms (Views: 0.5ms | ActiveRecord: 4.5ms (3 queries, 0 cached) | GC: 1.6ms)
 
 
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:17:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::RegistrationsController#create as JSON
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::RegistrationsController:0x00000000009c90>
+
+        json_response "missing params", false, {user: user}, :bad_request
+                                                      ^^^^
+Did you mean?  super):
+  
+app/controllers/api/v1/registrations_controller.rb:24:in `ensure_params_exist'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:18:19 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::RegistrationsController:0x0000000000db88>
+
+        json_response "missing params", false, { user: user }, :bad_request
+                                                       ^^^^
+Did you mean?  super):
+  
+app/controllers/api/v1/registrations_controller.rb:24:in `ensure_params_exist'
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:20:45 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+Filter chain halted as :ensure_params_exist rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:21:26 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+Filter chain halted as :ensure_params_exist rendered or redirected
+Completed 400 Bad Request in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/sign_up" for 127.0.0.1 at 2024-09-20 12:21:32 +0300
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kingsnow@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "_yNUkhs3VzkAZNSjES8w"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "authentication_token") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "kingsnow@mail.com"], ["encrypted_password", "$2a$12$uJ7d1VVATNgT1hKBpIo.aev3p02hu2qmXMzvtTRRFk89kTC.gSz0."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2024-09-20 09:21:32.742125"], ["updated_at", "2024-09-20 09:21:32.742125"], ["authentication_token", "_yNUkhs3VzkAZNSjES8w"]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:9:in `create'
+Completed 200 OK in 330ms (Views: 0.3ms | ActiveRecord: 4.0ms (3 queries, 0 cached) | GC: 9.5ms)
+
+
